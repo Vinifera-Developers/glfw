@@ -178,7 +178,7 @@ extern "C" {
  *
  *  @ingroup native
  */
-GLFWAPI const char* glfwGetWin32Adapter(GLFWmonitor* monitor);
+GLFWAPI const char* GLFW_CALL glfwGetWin32Adapter(GLFWmonitor* monitor);
 
 /*! @brief Returns the display device name of the specified monitor.
  *
@@ -195,7 +195,7 @@ GLFWAPI const char* glfwGetWin32Adapter(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI const char* glfwGetWin32Monitor(GLFWmonitor* monitor);
+GLFWAPI const char* GLFW_CALL glfwGetWin32Monitor(GLFWmonitor* monitor);
 
 /*! @brief Returns the `HWND` of the specified window.
  *
@@ -219,7 +219,7 @@ GLFWAPI const char* glfwGetWin32Monitor(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI HWND glfwGetWin32Window(GLFWwindow* window);
+GLFWAPI HWND GLFW_CALL glfwGetWin32Window(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_WGL)
@@ -246,7 +246,7 @@ GLFWAPI HWND glfwGetWin32Window(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI HGLRC glfwGetWGLContext(GLFWwindow* window);
+GLFWAPI HGLRC GLFW_CALL glfwGetWGLContext(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_COCOA)
@@ -264,7 +264,7 @@ GLFWAPI HGLRC glfwGetWGLContext(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI CGDirectDisplayID glfwGetCocoaMonitor(GLFWmonitor* monitor);
+GLFWAPI CGDirectDisplayID GLFW_CALL glfwGetCocoaMonitor(GLFWmonitor* monitor);
 
 /*! @brief Returns the `NSWindow` of the specified window.
  *
@@ -280,7 +280,7 @@ GLFWAPI CGDirectDisplayID glfwGetCocoaMonitor(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI id glfwGetCocoaWindow(GLFWwindow* window);
+GLFWAPI id GLFW_CALL glfwGetCocoaWindow(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_NSGL)
@@ -299,7 +299,7 @@ GLFWAPI id glfwGetCocoaWindow(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI id glfwGetNSGLContext(GLFWwindow* window);
+GLFWAPI id GLFW_CALL glfwGetNSGLContext(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_X11)
@@ -317,7 +317,7 @@ GLFWAPI id glfwGetNSGLContext(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI Display* glfwGetX11Display(void);
+GLFWAPI Display* GLFW_CALL glfwGetX11Display(void);
 
 /*! @brief Returns the `RRCrtc` of the specified monitor.
  *
@@ -333,7 +333,7 @@ GLFWAPI Display* glfwGetX11Display(void);
  *
  *  @ingroup native
  */
-GLFWAPI RRCrtc glfwGetX11Adapter(GLFWmonitor* monitor);
+GLFWAPI RRCrtc GLFW_CALL glfwGetX11Adapter(GLFWmonitor* monitor);
 
 /*! @brief Returns the `RROutput` of the specified monitor.
  *
@@ -349,7 +349,7 @@ GLFWAPI RRCrtc glfwGetX11Adapter(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI RROutput glfwGetX11Monitor(GLFWmonitor* monitor);
+GLFWAPI RROutput GLFW_CALL glfwGetX11Monitor(GLFWmonitor* monitor);
 
 /*! @brief Returns the `Window` of the specified window.
  *
@@ -365,7 +365,7 @@ GLFWAPI RROutput glfwGetX11Monitor(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI Window glfwGetX11Window(GLFWwindow* window);
+GLFWAPI Window GLFW_CALL glfwGetX11Window(GLFWwindow* window);
 
 /*! @brief Sets the current primary selection to the specified string.
  *
@@ -387,7 +387,7 @@ GLFWAPI Window glfwGetX11Window(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI void glfwSetX11SelectionString(const char* string);
+GLFWAPI void GLFW_CALL glfwSetX11SelectionString(const char* string);
 
 /*! @brief Returns the contents of the current primary selection as a string.
  *
@@ -415,7 +415,7 @@ GLFWAPI void glfwSetX11SelectionString(const char* string);
  *
  *  @ingroup native
  */
-GLFWAPI const char* glfwGetX11SelectionString(void);
+GLFWAPI const char* GLFW_CALL glfwGetX11SelectionString(void);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_GLX)
@@ -434,7 +434,7 @@ GLFWAPI const char* glfwGetX11SelectionString(void);
  *
  *  @ingroup native
  */
-GLFWAPI GLXContext glfwGetGLXContext(GLFWwindow* window);
+GLFWAPI GLXContext GLFW_CALL glfwGetGLXContext(GLFWwindow* window);
 
 /*! @brief Returns the `GLXWindow` of the specified window.
  *
@@ -451,7 +451,7 @@ GLFWAPI GLXContext glfwGetGLXContext(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI GLXWindow glfwGetGLXWindow(GLFWwindow* window);
+GLFWAPI GLXWindow GLFW_CALL glfwGetGLXWindow(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_WAYLAND)
@@ -469,7 +469,7 @@ GLFWAPI GLXWindow glfwGetGLXWindow(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI struct wl_display* glfwGetWaylandDisplay(void);
+GLFWAPI struct wl_display* GLFW_CALL glfwGetWaylandDisplay(void);
 
 /*! @brief Returns the `struct wl_output*` of the specified monitor.
  *
@@ -485,7 +485,7 @@ GLFWAPI struct wl_display* glfwGetWaylandDisplay(void);
  *
  *  @ingroup native
  */
-GLFWAPI struct wl_output* glfwGetWaylandMonitor(GLFWmonitor* monitor);
+GLFWAPI struct wl_output* GLFW_CALL glfwGetWaylandMonitor(GLFWmonitor* monitor);
 
 /*! @brief Returns the main `struct wl_surface*` of the specified window.
  *
@@ -501,7 +501,7 @@ GLFWAPI struct wl_output* glfwGetWaylandMonitor(GLFWmonitor* monitor);
  *
  *  @ingroup native
  */
-GLFWAPI struct wl_surface* glfwGetWaylandWindow(GLFWwindow* window);
+GLFWAPI struct wl_surface* GLFW_CALL glfwGetWaylandWindow(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_EGL)
@@ -522,7 +522,7 @@ GLFWAPI struct wl_surface* glfwGetWaylandWindow(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI EGLDisplay glfwGetEGLDisplay(void);
+GLFWAPI EGLDisplay GLFW_CALL glfwGetEGLDisplay(void);
 
 /*! @brief Returns the `EGLContext` of the specified window.
  *
@@ -539,7 +539,7 @@ GLFWAPI EGLDisplay glfwGetEGLDisplay(void);
  *
  *  @ingroup native
  */
-GLFWAPI EGLContext glfwGetEGLContext(GLFWwindow* window);
+GLFWAPI EGLContext GLFW_CALL glfwGetEGLContext(GLFWwindow* window);
 
 /*! @brief Returns the `EGLSurface` of the specified window.
  *
@@ -556,7 +556,7 @@ GLFWAPI EGLContext glfwGetEGLContext(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI EGLSurface glfwGetEGLSurface(GLFWwindow* window);
+GLFWAPI EGLSurface GLFW_CALL glfwGetEGLSurface(GLFWwindow* window);
 #endif
 
 #if defined(GLFW_EXPOSE_NATIVE_OSMESA)
@@ -582,7 +582,7 @@ GLFWAPI EGLSurface glfwGetEGLSurface(GLFWwindow* window);
  *
  *  @ingroup native
  */
-GLFWAPI int glfwGetOSMesaColorBuffer(GLFWwindow* window, int* width, int* height, int* format, void** buffer);
+GLFWAPI int GLFW_CALL glfwGetOSMesaColorBuffer(GLFWwindow* window, int* width, int* height, int* format, void** buffer);
 
 /*! @brief Retrieves the depth buffer associated with the specified window.
  *
@@ -606,7 +606,7 @@ GLFWAPI int glfwGetOSMesaColorBuffer(GLFWwindow* window, int* width, int* height
  *
  *  @ingroup native
  */
-GLFWAPI int glfwGetOSMesaDepthBuffer(GLFWwindow* window, int* width, int* height, int* bytesPerValue, void** buffer);
+GLFWAPI int GLFW_CALL glfwGetOSMesaDepthBuffer(GLFWwindow* window, int* width, int* height, int* bytesPerValue, void** buffer);
 
 /*! @brief Returns the `OSMesaContext` of the specified window.
  *
@@ -623,7 +623,7 @@ GLFWAPI int glfwGetOSMesaDepthBuffer(GLFWwindow* window, int* width, int* height
  *
  *  @ingroup native
  */
-GLFWAPI OSMesaContext glfwGetOSMesaContext(GLFWwindow* window);
+GLFWAPI OSMesaContext GLFW_CALL glfwGetOSMesaContext(GLFWwindow* window);
 #endif
 
 #ifdef __cplusplus
